@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 3.20)
-projects(orderbook CXX)
+project(orderbook CXX)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-add_compile_options(-Wall -Wextra -Wpendatic)
+add_compile_options(-Wall -Wextra -Wpedantic)
 
 add_library(ob src/order_book.cpp)
 target_include_directories(ob PUBLIC include)

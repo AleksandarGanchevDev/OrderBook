@@ -24,7 +24,7 @@ int main()
     book.add({2, ob::Side::Sell, 9501, 40});
     book.add({3, ob::Side::Buy, 9500, 25});
 
-    printPrice("BestBid: ", book.bestBid());
-    printPrice("BestAsk: ", book.bestAsk());
+    printPrice("BestBid", book.bestBid());
+    printPrice("BestAsk", book.bestAsk());
     return 0;
 }
