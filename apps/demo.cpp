@@ -26,5 +26,19 @@ int main()
 
     printPrice("BestBid", book.bestBid());
     printPrice("BestAsk", book.bestAsk());
+
+    std::cout << std::boolalpha;
+
+    std::cout << "cancel 1: " << book.cancel(1) << '\n';
+    printPrice("BestAsk", book.bestAsk()); // still 9501
+
+    std::cout << "cancel 2: " << book.cancel(2) << '\n';
+    printPrice("BestAsk", book.bestAsk()); // none
+
+    std::cout << "cancel 3: " << book.cancel(3) << '\n';
+    printPrice("BestBid", book.bestBid()); // none
+
+    std::cout << "cancel 99: " << book.cancel(99) << '\n';     // false
+    std::cout << "cancel 1 again: " << book.cancel(1) << '\n'; // false
     return 0;
 }
